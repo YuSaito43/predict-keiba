@@ -2,7 +2,7 @@
 競馬のG1レースの順位予測を行うモデル
 
 過去のG1レースのデータを利用して順位予測を行います。出力はどの場淳の馬が何位になる確率が最も高いか、となります。
-データはhttps://sports.yahoo.co.jp/keiba/schedule/monthly/のサイトをスクレイピングして作成します。
+データはhttps://sports.yahoo.co.jp/keiba/schedule/monthly/ のサイトをスクレイピングして作成します。
 
 予測を行うモデルがpredict_keiba.pyになります。
 データをスクレイピングするプログラムがscraping_training_data.pyです。
