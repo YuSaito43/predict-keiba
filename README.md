@@ -5,9 +5,13 @@
 データはhttps://sports.yahoo.co.jp/keiba/schedule/monthly/ のサイトをスクレイピングして作成します。
 
 予測を行うモデルがpredict_keiba.pyになります。
+
 データをスクレイピングするプログラムがscraping_training_data.pyです。
+
 予測するレースデータをスクレイピングするプログラムがscraping_race_data.pyです。
+
 （2022年5月の実行時ではうまくいったのですが、2022年10月時点では、サイトのHTMLが変わり動かなくなっています。）
 
 作成したデータはkeiba_result{year}.csvとなります。（yearには年数が入ります）
+
 予測するレースデータはrace_data.csvとなります。
