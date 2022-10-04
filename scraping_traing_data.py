@@ -56,15 +56,15 @@ for year in years:
                 tlist.append(re.sub(r'[\n\t\s]', '', temp[0].text)) #着順
             tlist.append(re.sub(r'[\n\t\s]', '', temp[1].text))     #枠番
             tlist.append(re.sub(r'[\n\t\s]', '', temp[3].find('a').text))   #馬名
-            umaURL = 'https://sports.yahoo.co.jp/' + temp[3].find('a').get('href')
+            umaURL = 'https://sports.yahoo.co.jp' + temp[3].find('a').get('href')
             uma_text = requests.get(umaURL, headers=headers)
             uma_text.encoding = uma_text.apparent_encoding
             uma_soup = bs(uma_text.text, "lxml")
-            if len(uma_soup.find_all('section', class_='hr-horseProfile')[0].find('div', class_='hr-horsePedigree__gen1st').find_all('div')) == 0:
+            if len(uma_soup.find('div', class_='hr-horsePedigree__gen1st').find_all('div')) == 0:
                 tlist.append('-')
                 tlist.append('-')
             else:
-                parents_list = uma_soup.find_all('section', class_='hr-horseProfile')[0].find('div', class_='hr-horsePedigree__gen1st').find_all('div')
+                parents_list = uma_soup.find('div', class_='hr-horsePedigree__gen1st').find_all('div')
                 tlist.append(re.sub(r'[\n\t\s]', '', parents_list[0].text))   #父親
                 tlist.append(re.sub(r'[\n\t\s]', '', parents_list[1].text))   #母親
             if re.sub(r'[\n\t\s]', '', temp[3].find('p').text).split('/')[0][0] =='せ':
