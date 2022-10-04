@@ -9,7 +9,8 @@
 データをスクレイピングするプログラムがscraping_training_data.pyです。
 
 予測するレースデータをスクレイピングするプログラムがscraping_race_data.pyです。
- （2022年5月の実行時ではうまくいったのですが、2022年10月時点では、サイトのHTMLが変わり動かなくなっています。）
+
+ （2022年10月5日変更：scraping_training_data.pyは動くようになりました。race_dataのほうは未対応）
 
 作成したデータはkeiba_result{year}.csvとなります。（yearには年数が入ります）
 
